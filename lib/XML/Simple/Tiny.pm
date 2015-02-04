@@ -3,19 +3,17 @@ use Exporter 'import';
 @EXPORT_OK = qw( parsefile parsestring );
 use strict;
 use warnings;
+our $TAGS  = 1;	#generate tag attribute
+our $NAMES = 1;	#name a node by it's 'name' attribute
 
 =head1 NAME
 
 XML::Simple::Tiny - a tiny helper to read XML::Tiny output and transform it 
-to something like XML::Simple, but without dependencies.
-
-=head1 VERSION
-
-Version 0.01
+to something like XML::Simple, but without other dependencies.
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use XML::Tiny;
 
 =head1 SYNOPSIS
@@ -87,14 +85,14 @@ sub traverse{
 			my $class = $obj->{name};
 			#add attributs
 			my %att = exists $obj->{attrib} ? %{$obj->{attrib}} : ( );
-			my $elt = { tag => $class, %att };
+			my $elt = { ($TAGS ? (tag => $class) : () ), %att };
 			#add childs
 			foreach my $childobj( @{$obj->{content}} ){
 				my $childelt = traverse( $childobj, $elt );
 			}
 			#add element in parent $node
 			my $name = $obj->{attrib}->{name};
-			if($name){
+			if($NAMES and $name){
 				if(exists($node->{ $class }->{ $name })){
 					my $first = $node->{ $class }->{ $name };
 					if(ref $first eq 'ARRAY'){
