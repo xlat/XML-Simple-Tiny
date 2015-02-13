@@ -27,7 +27,7 @@ use XML::Tiny;
     $doc->{root}->{branch}->{second}->{leaf}->[0]->{content}; #"a dead leaf"
     $doc->{root}->{branch}->{first}->{name}; "first"
     $doc->{root}->{branch}->{first}->{tag}; "branch"
-__DATA__
+	__DATA__
     <?xml version="1.0" encoding="utf-8" ?>
     <root>
      <branch name="first"/>
