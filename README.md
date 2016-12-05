@@ -1,4 +1,4 @@
-XML-Simple-Tiny
+# XML-Simple-Tiny
 
 v0.01
 
@@ -8,7 +8,7 @@ v0.01
 XML::Simple::Tiny is a tiny helper to read XML::Tiny output and transform
 it to something like XML::Simple, but without dependencies.
 
-INSTALLATION
+# INSTALLATION
 
 To install this module, run the following commands:
 
@@ -17,7 +17,7 @@ To install this module, run the following commands:
 	make test
 	make install
 
-SUPPORT AND DOCUMENTATION
+# SUPPORT AND DOCUMENTATION
 
 After installing, you can find documentation for this module with the
 perldoc command.
@@ -39,7 +39,7 @@ You can also look for information at:
         http://search.cpan.org/dist/XML-Simple-Tiny/
 
 
-LICENSE AND COPYRIGHT
+# LICENSE AND COPYRIGHT
 
 Copyright (C) 2012 Nicolas Georges
 
