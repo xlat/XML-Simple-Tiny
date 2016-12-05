@@ -2,6 +2,9 @@ XML-Simple-Tiny
 
 v0.01
 
+
+[![Build Status](https://travis-ci.org/xlat/XML-Simple-Tiny.svg?branch=master)](https://travis-ci.org/xlat/XML-Simple-Tiny)
+
 XML::Simple::Tiny is a tiny helper to read XML::Tiny output and transform
 it to something like XML::Simple, but without dependencies.
 
